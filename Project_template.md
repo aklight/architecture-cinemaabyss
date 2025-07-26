@@ -284,8 +284,8 @@ cat .docker/config.json | base64
 #### Шаг 3
 Добавьте сюда скриншота вывода при вызове https://cinemaabyss.example.com/api/movies и  скриншот вывода event-service после вызова тестов.
 
-[Cкриншот вывода при вызове httpscinemaabyss.example.comapimovies](screenshots%2Fскриншот вывода при вызове httpscinemaabyss.example.comapimovies.png)
-[скриншот вывода event-service после вызова тестов](screenshots%2Fскриншот вывода event-service после вызова тестов.png)
+[k8s_cinemaabyss_example_api.png](screenshots%2Fk8s_cinemaabyss_example_api.png)
+[k8s_events-servise_logs](screenshots%2Fk8s_events-servise_logs.png)
 
 
 # Задание 4
