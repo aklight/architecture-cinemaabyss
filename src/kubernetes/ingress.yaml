@@ -4,6 +4,7 @@ metadata:
   name: cinemaabyss-ingress
   namespace: cinemaabyss
   annotations:
+    kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
@@ -22,9 +23,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: proxy-service
+                name: movies-service
                 port:
-                  number: 8000
+                  number: 8081
           - path: /api/users
             pathType: Prefix
             backend:
