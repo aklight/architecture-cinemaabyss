@@ -5,7 +5,7 @@
 1. Спроектируйте to be архитектуру КиноБездны, разделив всю систему на отдельные домены и организовав интеграционное взаимодействие и единую точку вызова сервисов.
 Результат представьте в виде контейнерной диаграммы в нотации С4.
 Добавьте ссылку на файл в этот шаблон
-[ссылка на файл](ссылка)
+[C4 diagram](diagrams%2FCinema_container.puml)
 
 # Задание 2
 
@@ -48,7 +48,7 @@
 
 
 ### 2. Kafka
- Вам как архитектуру нужно также проверить гипотезу насколько просто реализовать применение Kafka в данной архитектуре.
+ Вам как архитектору нужно также проверить гипотезу насколько просто реализовать применение Kafka в данной архитектуре.
 
 Для этого нужно сделать MVP сервис events, который будет при вызове API создавать и сам же читать сообщения в топике Kafka.
 
@@ -58,6 +58,15 @@
 
 Необходимые тесты для проверки этого API вызываются при запуске npm run test:local из папки tests/postman 
 Приложите скриншот тестов и скриншот состояния топиков Kafka из UI http://localhost:8090 
+
+Скриншоты:
+
+[Postman_1](screenshots%2Fpostman_1.png)
+[Postman_2](screenshots%2Fpostman_2.png)
+[Postman_3](screenshots%2Fpostman_3.png)
+[Postman_4](screenshots%2Fpostman_4.png)
+[Postman_5](screenshots%2Fpostman_5.png)
+[Kafka_UI](screenshots%2Fkafka_ui.png)
 
 # Задание 3
 
@@ -275,6 +284,9 @@ cat .docker/config.json | base64
 #### Шаг 3
 Добавьте сюда скриншота вывода при вызове https://cinemaabyss.example.com/api/movies и  скриншот вывода event-service после вызова тестов.
 
+[k8s_cinemaabyss_example_api.png](screenshots%2Fk8s_cinemaabyss_example_api.png)
+[k8s_events-servise_logs](screenshots%2Fk8s_events-servise_logs.png)
+
 
 # Задание 4
 Для простоты дальнейшего обновления и развертывания вам как архитектуру необходимо так же реализовать helm-чарты для прокси-сервиса и проверить работу 
@@ -349,6 +361,10 @@ minikube tunnel
 Потом вызовите 
 https://cinemaabyss.example.com/api/movies
 и приложите скриншот развертывания helm и вывода https://cinemaabyss.example.com/api/movies
+
+[helm_cinemaabyss_example_api.png](screenshots%2Fhelm_cinemaabyss_example_com.png)
+[helm_deployment](screenshots%2Fhelm_deployment.png)
+
 
 ## Удаляем все
 
